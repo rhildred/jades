@@ -1,0 +1,1345 @@
+[14-Mar-2024 23:59:22 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 00:26:24 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 00:26:29 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 00:26:43 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 00:26:48 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 00:33:10 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 00:33:26 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 00:33:41 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 00:33:45 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 00:34:14 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 00:34:53 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 00:35:28 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 00:35:44 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`option_name`) FROM `wp_options` WHERE `option_name` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`option_name`) FROM `wp_options` WHERE `option_name` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`o...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`o...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('option_name', Array, 'wp_options', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`option_name`) FROM `wp_options` WHERE `option_name` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT `option_id` FROM `wp_options` WHERE `option_value` LIKE BINARY '%paletteColor%' ORDER BY `option_id` ASC LIMIT 1000</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT `option_id` FROM `wp_options` WHERE `option_value` LIKE BINARY :param0  ORDER BY `option_id` ASC LIMIT 1000 | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT `option_...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(245): wpdb->get_results('SELECT `option_...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(70): Blocksy\Database\SearchReplace->php_handle_col('option_value', Array, 'wp_options', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT `option_id` FROM `wp_options` WHERE `option_value` LIKE BINARY '%paletteColor%' ORDER BY `option_id` ASC LIMIT 1000 made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->php_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`autoload`) FROM `wp_options` WHERE `autoload` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`autoload`) FROM `wp_options` WHERE `autoload` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`a...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`a...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('autoload', Array, 'wp_options', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`autoload`) FROM `wp_options` WHERE `autoload` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_content`) FROM `wp_posts` WHERE `post_content` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_content`) FROM `wp_posts` WHERE `post_content` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_content', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`post_content`) FROM `wp_posts` WHERE `post_content` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_title`) FROM `wp_posts` WHERE `post_title` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_title`) FROM `wp_posts` WHERE `post_title` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_title', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`post_title`) FROM `wp_posts` WHERE `post_title` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_excerpt`) FROM `wp_posts` WHERE `post_excerpt` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_excerpt`) FROM `wp_posts` WHERE `post_excerpt` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_excerpt', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`post_excerpt`) FROM `wp_posts` WHERE `post_excerpt` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_status`) FROM `wp_posts` WHERE `post_status` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_status`) FROM `wp_posts` WHERE `post_status` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_status', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`post_status`) FROM `wp_posts` WHERE `post_status` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`comment_status`) FROM `wp_posts` WHERE `comment_status` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`comment_status`) FROM `wp_posts` WHERE `comment_status` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`c...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`c...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('comment_status', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`comment_status`) FROM `wp_posts` WHERE `comment_status` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`ping_status`) FROM `wp_posts` WHERE `ping_status` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`ping_status`) FROM `wp_posts` WHERE `ping_status` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('ping_status', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`ping_status`) FROM `wp_posts` WHERE `ping_status` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_password`) FROM `wp_posts` WHERE `post_password` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_password`) FROM `wp_posts` WHERE `post_password` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_password', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`post_password`) FROM `wp_posts` WHERE `post_password` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_name`) FROM `wp_posts` WHERE `post_name` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_name`) FROM `wp_posts` WHERE `post_name` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_name', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`post_name`) FROM `wp_posts` WHERE `post_name` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`to_ping`) FROM `wp_posts` WHERE `to_ping` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`to_ping`) FROM `wp_posts` WHERE `to_ping` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`t...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`t...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('to_ping', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`to_ping`) FROM `wp_posts` WHERE `to_ping` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`pinged`) FROM `wp_posts` WHERE `pinged` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`pinged`) FROM `wp_posts` WHERE `pinged` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('pinged', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`pinged`) FROM `wp_posts` WHERE `pinged` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_content_filtered`) FROM `wp_posts` WHERE `post_content_filtered` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_content_filtered`) FROM `wp_posts` WHERE `post_content_filtered` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_content_fi...', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`post_content_filtered`) FROM `wp_posts` WHERE `post_content_filtered` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`guid`) FROM `wp_posts` WHERE `guid` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`guid`) FROM `wp_posts` WHERE `guid` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`g...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`g...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('guid', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`guid`) FROM `wp_posts` WHERE `guid` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_type`) FROM `wp_posts` WHERE `post_type` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_type`) FROM `wp_posts` WHERE `post_type` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_type', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`post_type`) FROM `wp_posts` WHERE `post_type` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_mime_type`) FROM `wp_posts` WHERE `post_mime_type` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_mime_type`) FROM `wp_posts` WHERE `post_mime_type` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_mime_type', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`post_mime_type`) FROM `wp_posts` WHERE `post_mime_type` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`meta_key`) FROM `wp_postmeta` WHERE `meta_key` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`meta_key`) FROM `wp_postmeta` WHERE `meta_key` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`m...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`m...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('meta_key', Array, 'wp_postmeta', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`meta_key`) FROM `wp_postmeta` WHERE `meta_key` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`meta_value`) FROM `wp_postmeta` WHERE `meta_value` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`meta_value`) FROM `wp_postmeta` WHERE `meta_value` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`m...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`m...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('meta_value', Array, 'wp_postmeta', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(412): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(29): Blocksy\DbVersioning\V200->migrate_color_palette()
+#6 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#7 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#8 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#9 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#10 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#11 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#12 /wordpress/wp-settings.php(2): do_action('init')
+#13 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#14 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#15 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#16 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#17 {main}</pre>
+ for query SELECT COUNT(`meta_value`) FROM `wp_postmeta` WHERE `meta_value` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\DbVersioning\V200->migrate_color_palette, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`option_name`) FROM `wp_options` WHERE `option_name` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`option_name`) FROM `wp_options` WHERE `option_name` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`o...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`o...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('option_name', Array, 'wp_options', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`option_name`) FROM `wp_options` WHERE `option_name` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT `option_id` FROM `wp_options` WHERE `option_value` LIKE BINARY '%paletteColor%' ORDER BY `option_id` ASC LIMIT 1000</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT `option_id` FROM `wp_options` WHERE `option_value` LIKE BINARY :param0  ORDER BY `option_id` ASC LIMIT 1000 | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT `option_...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(245): wpdb->get_results('SELECT `option_...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(70): Blocksy\Database\SearchReplace->php_handle_col('option_value', Array, 'wp_options', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT `option_id` FROM `wp_options` WHERE `option_value` LIKE BINARY '%paletteColor%' ORDER BY `option_id` ASC LIMIT 1000 made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->php_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`autoload`) FROM `wp_options` WHERE `autoload` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`autoload`) FROM `wp_options` WHERE `autoload` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`a...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`a...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('autoload', Array, 'wp_options', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`autoload`) FROM `wp_options` WHERE `autoload` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_content`) FROM `wp_posts` WHERE `post_content` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_content`) FROM `wp_posts` WHERE `post_content` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_content', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`post_content`) FROM `wp_posts` WHERE `post_content` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_title`) FROM `wp_posts` WHERE `post_title` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_title`) FROM `wp_posts` WHERE `post_title` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_title', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`post_title`) FROM `wp_posts` WHERE `post_title` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_excerpt`) FROM `wp_posts` WHERE `post_excerpt` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_excerpt`) FROM `wp_posts` WHERE `post_excerpt` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_excerpt', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`post_excerpt`) FROM `wp_posts` WHERE `post_excerpt` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_status`) FROM `wp_posts` WHERE `post_status` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_status`) FROM `wp_posts` WHERE `post_status` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_status', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`post_status`) FROM `wp_posts` WHERE `post_status` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`comment_status`) FROM `wp_posts` WHERE `comment_status` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`comment_status`) FROM `wp_posts` WHERE `comment_status` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`c...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`c...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('comment_status', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`comment_status`) FROM `wp_posts` WHERE `comment_status` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`ping_status`) FROM `wp_posts` WHERE `ping_status` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`ping_status`) FROM `wp_posts` WHERE `ping_status` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('ping_status', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`ping_status`) FROM `wp_posts` WHERE `ping_status` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_password`) FROM `wp_posts` WHERE `post_password` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_password`) FROM `wp_posts` WHERE `post_password` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_password', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`post_password`) FROM `wp_posts` WHERE `post_password` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_name`) FROM `wp_posts` WHERE `post_name` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_name`) FROM `wp_posts` WHERE `post_name` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_name', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`post_name`) FROM `wp_posts` WHERE `post_name` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`to_ping`) FROM `wp_posts` WHERE `to_ping` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`to_ping`) FROM `wp_posts` WHERE `to_ping` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`t...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`t...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('to_ping', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`to_ping`) FROM `wp_posts` WHERE `to_ping` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`pinged`) FROM `wp_posts` WHERE `pinged` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`pinged`) FROM `wp_posts` WHERE `pinged` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('pinged', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`pinged`) FROM `wp_posts` WHERE `pinged` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_content_filtered`) FROM `wp_posts` WHERE `post_content_filtered` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_content_filtered`) FROM `wp_posts` WHERE `post_content_filtered` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_content_fi...', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`post_content_filtered`) FROM `wp_posts` WHERE `post_content_filtered` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`guid`) FROM `wp_posts` WHERE `guid` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`guid`) FROM `wp_posts` WHERE `guid` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`g...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`g...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('guid', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`guid`) FROM `wp_posts` WHERE `guid` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_type`) FROM `wp_posts` WHERE `post_type` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_type`) FROM `wp_posts` WHERE `post_type` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_type', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`post_type`) FROM `wp_posts` WHERE `post_type` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`post_mime_type`) FROM `wp_posts` WHERE `post_mime_type` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`post_mime_type`) FROM `wp_posts` WHERE `post_mime_type` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`p...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`p...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('post_mime_type', Array, 'wp_posts', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`post_mime_type`) FROM `wp_posts` WHERE `post_mime_type` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`meta_key`) FROM `wp_postmeta` WHERE `meta_key` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`meta_key`) FROM `wp_postmeta` WHERE `meta_key` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`m...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`m...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('meta_key', Array, 'wp_postmeta', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`meta_key`) FROM `wp_postmeta` WHERE `meta_key` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:35:45 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT COUNT(`meta_value`) FROM `wp_postmeta` WHERE `meta_value` LIKE BINARY '%paletteColor%';</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT COUNT(`meta_value`) FROM `wp_postmeta` WHERE `meta_value` LIKE BINARY :param0 ; | parameters: %paletteColor%</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3449 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ":param0": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3): WP_SQLite_DB->query('SELECT COUNT(`m...')
+#2 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(181): wpdb->get_var('SELECT COUNT(`m...')
+#3 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/utils/db-search-replace.php(80): Blocksy\Database\SearchReplace->sql_handle_col('meta_value', Array, 'wp_postmeta', 'paletteColor', 'theme-palette-c...')
+#4 /wordpress/wp-content/themes/blocksy/inc/classes/db-versioning/v2-0-0.php(40): Blocksy\Database\SearchReplace->invoke(Array)
+#5 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(192): Blocksy\DbVersioning\V200->migrate()
+#6 [internal function]: Blocksy\DbVersioning->Blocksy\{closure}()
+#7 /wordpress/wp-content/themes/blocksy/inc/classes/theme-db-versioning.php(59): call_user_func(Object(Closure))
+#8 /wordpress/wp-includes/class-wp-hook.php(3): Blocksy\DbVersioning->init('')
+#9 /wordpress/wp-includes/class-wp-hook.php(3): WP_Hook->apply_filters(NULL, Array)
+#10 /wordpress/wp-includes/plugin.php(2): WP_Hook->do_action(Array)
+#11 /wordpress/wp-settings.php(2): do_action('init')
+#12 /wordpress/wp-config.php(104): require_once('/wordpress/wp-s...')
+#13 /wordpress/wp-load.php(2): require_once('/wordpress/wp-c...')
+#14 /wordpress/wp-admin/admin.php(2): require_once('/wordpress/wp-l...')
+#15 /wordpress/wp-admin/themes.php(2): require_once('/wordpress/wp-a...')
+#16 {main}</pre>
+ for query SELECT COUNT(`meta_value`) FROM `wp_postmeta` WHERE `meta_value` LIKE BINARY '%paletteColor%'; made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Blocksy\DbVersioning->init, call_user_func, Blocksy\DbVersioning->Blocksy\{closure}, Blocksy\DbVersioning\V200->migrate, Blocksy\Database\SearchReplace->invoke, Blocksy\Database\SearchReplace->sql_handle_col, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[15-Mar-2024 00:36:31 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 00:36:38 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 00:36:47 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 00:36:57 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 00:36:57 UTC] PHP Warning:  Attempt to read property "title" on null in /wordpress/wp-includes/class-wp-customize-widgets.php on line 28
+[15-Mar-2024 00:39:03 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 00:39:03 UTC] PHP Warning:  Attempt to read property "title" on null in /wordpress/wp-includes/class-wp-customize-widgets.php on line 28
+[15-Mar-2024 00:41:05 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 00:41:05 UTC] PHP Warning:  Attempt to read property "title" on null in /wordpress/wp-includes/class-wp-customize-widgets.php on line 28
+[15-Mar-2024 00:41:22 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 00:41:45 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 00:42:02 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 00:42:30 UTC] PHP Notice: A feed could not be found at `https://wordpress.org/`; the status code is `400` and content-type is `text/plain` in /wordpress/wp-includes/class-simplepie.php on line 2
+[15-Mar-2024 00:42:38 UTC] PHP Notice: A feed could not be found at `https://wordpress.org/`; the status code is `400` and content-type is `text/plain` in /wordpress/wp-includes/class-simplepie.php on line 2
+[15-Mar-2024 00:42:39 UTC] PHP Notice: A feed could not be found at `https://wordpress.org/`; the status code is `400` and content-type is `text/plain` in /wordpress/wp-includes/class-simplepie.php on line 2
+[15-Mar-2024 00:43:07 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 00:57:29 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:12:41 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:21:18 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:21:30 UTC] PHP Notice: A feed could not be found at `https://wordpress.org/`; the status code is `400` and content-type is `text/plain` in /wordpress/wp-includes/class-simplepie.php on line 2
+[15-Mar-2024 01:22:42 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:23:52 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:25:07 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:25:37 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:31:20 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:31:35 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:31:57 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:32:23 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:32:23 UTC] PHP Warning:  Attempt to read property "title" on null in /wordpress/wp-includes/class-wp-customize-widgets.php on line 28
+[15-Mar-2024 01:33:13 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:33:14 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 01:33:47 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:33:47 UTC] PHP Warning:  Attempt to read property "title" on null in /wordpress/wp-includes/class-wp-customize-widgets.php on line 28
+[15-Mar-2024 01:33:59 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:33:59 UTC] PHP Warning:  Attempt to read property "title" on null in /wordpress/wp-includes/class-wp-customize-widgets.php on line 28
+[15-Mar-2024 01:34:32 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:34:32 UTC] PHP Warning:  Attempt to read property "title" on null in /wordpress/wp-includes/class-wp-customize-widgets.php on line 28
+[15-Mar-2024 01:34:42 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:34:42 UTC] PHP Warning:  Attempt to read property "title" on null in /wordpress/wp-includes/class-wp-customize-widgets.php on line 28
+[15-Mar-2024 01:35:25 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:35:39 UTC] PHP Warning:  file_get_contents(/wordpress/wp-includes/css/classic-themes.min.css): Failed to open stream: No such file or directory in /wordpress/wp-includes/script-loader.php on line 14
+[15-Mar-2024 01:35:39 UTC] PHP Warning:  Attempt to read property "title" on null in /wordpress/wp-includes/class-wp-customize-widgets.php on line 28
+[15-Mar-2024 01:35:44 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 01:36:59 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 01:37:35 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 02:51:14 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 02:51:16 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 02:51:22 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 02:51:32 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 02:51:52 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 02:52:17 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 03:02:25 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 03:02:32 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[15-Mar-2024 03:02:34 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[21-Mar-2024 22:59:12 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[21-Mar-2024 22:59:14 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[21-Mar-2024 22:59:48 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[21-Mar-2024 23:27:38 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
+[22-Mar-2024 01:08:17 UTC] PHP Deprecated:  Hook http_api_transports is deprecated since version 6.4.0 with no alternative available. in /wordpress/wp-includes/functions.php on line 140
