@@ -1,0 +1,10 @@
+{
+"description": "serverless wordpress",
+	"scripts": {
+		"build": "diy-pwa build jades",
+		"preview": "diy-pwa preview jades"
+	},
+	"devDependencies": {
+		"diy-pwa": "latest"
+	}
+}
