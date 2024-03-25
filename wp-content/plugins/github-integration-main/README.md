@@ -1,2 +1,0 @@
-# github-integration
-wordpress plugin
